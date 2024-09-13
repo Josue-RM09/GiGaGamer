@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="info.gigagamer.Entity.EntityPedido" table="pedido" schema="tienda_online">
+        <id name="idPedido">
+            <column name="id_pedido" sql-type="int"/>
+        </id>
+        <property name="idUsuario">
+            <column name="id_usuario" sql-type="int" not-null="true"/>
+        </property>
+        <property name="fechaPedido">
+            <column name="fecha_pedido" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="total">
+            <column name="total" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

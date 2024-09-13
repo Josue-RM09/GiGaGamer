@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Listado de Usuarios</title>
+</h:head>
+<h:body>
+    <h1>Usuarios</h1>
+    <h:dataTable value="#{usuarioBean.listaEmpleado}" var="empleado">
+        <h:column>
+            <f:facet name="header">Nombre</f:facet>
+            #{empleado.nombre}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Tipo de Usuario</f:facet>
+            #{empleado.tipoUsuario}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Email</f:facet>
+            #{empleado.email}
+        </h:column>
+    </h:dataTable>
+</h:body>
+</html>

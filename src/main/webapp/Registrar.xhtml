@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Registrar Usuario</title>
+    <meta charset="UTF-8" />
+    <h:outputStylesheet name="/css/StyleRegistro2.css" />
+</h:head>
+
+<h:body>
+    <div class="InicioLogin">
+        <div class="Empresa">
+            <p>GigaGamer</p>
+            <h:graphicImage name="/img/control-removebg-preview.png" width="200" height="200" alt="logo" />
+        </div>
+        <h:form>
+            <div class="TituloLogin">
+                <p>Registrar Usuario</p>
+            </div>
+            <div class="ContenidoLogin">
+                <div class="ContenidoLogin3">
+                    <h:outputLabel for="NombreRegistro" value="Nombre de Usuario:" />
+                    <h:inputText id="NombreRegistro" value="#{registroBean.nombreRegistro}" class="NombreRegistro" />
+                </div>
+                <div class="ContenidoLogin1">
+                    <h:outputLabel for="CorreoLogin" value="Correo Electrónico:" />
+                    <h:inputText id="CorreoLogin" value="#{registroBean.emailRegistro}" class="CorreoLogin" />
+                </div>
+                <div class="ContenidoLogin2">
+                    <h:outputLabel for="PasswordLogin" value="Contraseña:" />
+                    <h:inputSecret id="PasswordLogin" value="#{registroBean.passwordRegistro}" class="PasswordLogin" />
+                </div>
+            </div>
+            <div class="BotonLogin">
+                <h:commandButton value="Registrar Usuario" action="#{registroBean.registro}" styleClass="BTN_IS" />
+            </div>
+        </h:form>
+        <div class="Informacion_General">
+            <p>¿Ya tienes cuenta? <a href="faces/Login.xhtml">Inicia Sesión Aquí</a></p>
+            <p>2024 GigaGamer, todos los derechos reservados</p>
+        </div>
+    </div>
+</h:body>
+</html>

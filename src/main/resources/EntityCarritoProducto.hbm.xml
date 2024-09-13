@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="info.gigagamer.Entity.EntityCarritoProducto" table="carrito_producto" schema="tienda_online">
+        <composite-id mapped="true" class="info.gigagamer.Entity.EntityCarritoProductoPK">
+            <key-property name="idCarrito">
+                <column name="id_carrito" sql-type="int"/>
+            </key-property>
+            <key-property name="idProducto">
+                <column name="id_producto" sql-type="int"/>
+            </key-property>
+        </composite-id>
+        <property name="cantidad">
+            <column name="cantidad" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

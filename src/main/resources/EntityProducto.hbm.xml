@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="info.gigagamer.Entity.EntityProducto" table="producto" schema="tienda_online">
+        <id name="idProducto">
+            <column name="id_producto" sql-type="int"/>
+        </id>
+        <property name="nombreProducto">
+            <column name="nombre_producto" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="descripcion">
+            <column name="descripcion" sql-type="text" not-null="true"/>
+        </property>
+        <property name="precio">
+            <column name="precio" sql-type="decimal(10,2)" precision="10" scale="2"/>
+        </property>
+        <property name="categoria">
+            <column name="categoria" sql-type="enum('videojuegos', 'tecnología')"/>
+        </property>
+        <property name="stock">
+            <column name="stock" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>
